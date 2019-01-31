@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B130A49B-6676-465D-BAD4-B83666DFFA44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>天若OCR文字识别</RootNamespace>
+    <AssemblyName>天若OCR文字识别</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>天若OCR文字识别.ico</ApplicationIcon>
+    <StartupObject>天若OCR文字识别.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>D:\C#学习\百度ocr\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpHelper">
+      <HintPath>D:\C#学习\百度ocr\HttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>D:\C#学习\百度ocr\Interop.MSScriptControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <HintPath>D:\C#学习\百度ocr\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\C#学习\百度ocr\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ShareX.ScreenCaptureLib">
+      <HintPath>D:\C#学习\百度ocr\ShareX.ScreenCaptureLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="zxing">
+      <HintPath>D:\C#学习\百度ocr\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvRichTextBox.Designer.cs">
+      <DependentUpon>AdvRichTextBox.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="aliFMtable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aliFMtable.Designer.cs">
+      <DependentUpon>aliFMtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmflags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmflags.Designer.cs">
+      <DependentUpon>Fmflags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmHelp.Designer.cs">
+      <DependentUpon>FmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmloading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmloading.Designer.cs">
+      <DependentUpon>Fmloading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmMain.Designer.cs">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmnote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmnote.Designer.cs">
+      <DependentUpon>Fmnote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmScreenPaste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmScreenPaste.Designer.cs">
+      <DependentUpon>FmScreenPaste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmSetting.Designer.cs">
+      <DependentUpon>FmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpRepaint.cs" />
+    <Compile Include="HelpWin32.cs" />
+    <Compile Include="inihelp.cs" />
+    <Compile Include="Messageload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messageload.Designer.cs">
+      <DependentUpon>Messageload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceForm.Designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticValue.cs" />
+    <Compile Include="webrowserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdvRichTextBox.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdvRichTextBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emgu\CV\World.dll" />
+    <EmbeddedResource Include="FmHelp.resx">
+      <DependentUpon>FmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmloading.resx">
+      <DependentUpon>Fmloading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmMain.resx">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HttpHelper.dll" />
+    <EmbeddedResource Include="Newtonsoft\Json.dll" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screenshot.wav" />
+    <EmbeddedResource Include="ShareX\HelpersLib.dll" />
+    <EmbeddedResource Include="ShareX\ScreenCaptureLib.dll" />
+    <EmbeddedResource Include="update.exe" />
+    <EmbeddedResource Include="zxing.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
